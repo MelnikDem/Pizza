@@ -1,49 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="/styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
     <title>Pizza service</title>
-</head>
-<body>
-    <header>
+  </head>
+  <body>
+    <div class="container">
+      <header>
         <div class="header">
-            <div class="header__logo">
-                <a href="" class="header__logo-icon">mania</a>
-            </div>
-            <div class="header__nav">
-                <nav>
-                    <ul class="nav">
-                        <li class="nav__item">Home</li>
-                        <li class="nav__item">Menu</li>
-                        <li class="nav__item">Specials & Coupons</li>
-                        <li class="nav__item">Contact Us</li>
-                    </ul>
-                </nav>
-            </div>
+          <div class="header__logo">
+            <a href="" class="header__logo-link">
+              <svg class="logo-icon">
+                <use href="./img/symbol-defs.svg#icon-PizzaLogo"></use>
+              </svg>
+              <span class="logo-text">mania</span>
+            </a>
+          </div>
+          <div class="header__nav">
+            <nav>
+              <ul class="nav">
+                <li class="nav__item">Home</li>
+                <li class="nav__item">
+                  <a href="./menu/index.html">Menu</a>
+                </li>
+                <li class="nav__item">Specials & Coupons</li>
+                <li class="nav__item">Contact Us</li>
+              </ul>
+            </nav>
+          </div>
         </div>
-    </header>
-    <main>
+      </header>
+      <main>
         <div class="content">
-            <div class="content__left">
-                <h1>Pizza family</h1>
-                <p>people disappoint, but pizza never does.</p>
-                <div>
-                    <input type="text">
-                    <input type="button" placeholder="Search Location">
-                </div>
+          <div class="content__left-part">
+            <h1 class="content__heading">Pizza family</h1>
+            <p class="content__text">
+              people disappoint, but pizza never does.
+            </p>
+            <div class="content__location location">
+              <input type="text" class="location__input" />
+              <input
+                type="button"
+                value="search location"
+                class="location__btn"
+              />
             </div>
-            <div class="content__right">
-                <img src="./img/burger1.png" alt="Family pizza image">
+            <div>
+              <button class="button-try btn">Try now</button>
             </div>
+          </div>
+          <div class="content__right-part">
+            <div class="content__img-wrapper">
+              <img
+                class="content__img"
+                src="./img/burger1.png"
+                alt="Family pizza image"
+              />
+            </div>
+            <button class="button-mode btn">
+              <svg class="bth__icon">
+                <use href="./img/symbol-defs.svg#icon-darkmode"></use>
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="page-buttons">
-            <button>Try now</button>
-            <button></button>
-        </div>
-    </main>
-</body>
+      </main>
+    </div>
+  </body>
 </html>
