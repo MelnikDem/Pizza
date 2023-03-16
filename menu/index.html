@@ -18,16 +18,41 @@
   <body>
     <div class="container">
       <header class="menu-header">
-        <h1 class="menu-header__heading">Menu</h1>
+        <div class="header">
+          <div class="header__logo">
+            <a href="" class="header__logo-link">
+              <svg class="logo-icon">
+                <use href="../img/symbol-defs.svg#icon-PizzaLogo"></use>
+              </svg>
+              <span class="logo-text">mania</span>
+            </a>
+          </div>
+          <div class="header__nav">
+            <nav>
+              <ul class="nav">
+                <li class="nav__item">
+                 <a href="/index.html">Home</a> </li>
+                <li class="nav__item">
+                  <a href="./menu/index.html">Menu</a>
+                </li>
+                <li class="nav__item">Specials & Coupons</li>
+                <li class="nav__item">Contact Us</li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </header>
       <main>
-        <div class="menu-page">
+        <div class="main-title">
+          <h1 class="main-heading">Menu</h1>
+        </div>
+        <div class="menu-page">  
           <div class="menu-page__thumb">
             <img class="menu-page__img" src="../img/pizza-section.png" alt="" />
           </div>
-          <div>
+          <div class="menu-page__slice-block">
             <div class="menu-page__pizza-select">
-              <h2 class="menu-page__heading">Pizza by the slice</h2>
+              <h2 class="menu-page__heading first-menu">Pizza by the slice</h2>
               <ul>
                 <li>Classic pizza ..................... $4</li>
                 <li>Texas pizza ....................... $4</li>
@@ -38,10 +63,10 @@
             <div class="menu-page__pizza-select">
               <h2 class="menu-page__heading">Pizza by the slice</h2>
               <ul>
-                <li>Manhatan pizza ..................... $4</li>
-                <li>Hawai pizza ........................ $4</li>
-                <li>4 cheese pizza ..................... $4</li>
-                <li>Cantry pizza........................ $4</li>
+                <li>Margarita pizza .................... $4</li>
+                <li>Hawaiian pizza ..................... $4</li>
+                <li>Cheese pizza ....................... $4</li>
+                <li>Veggie pizza........................ $4</li>
               </ul>
             </div>
           </div>
@@ -91,9 +116,7 @@
             </div>
           </div>
         </div>
-        <div>
-          <a class="menu-page__button" href="">Explore more</a>
-        </div>
+       <a class="menu-page__button" href="">Explore more</a>
       </main>
     </div>
   </body>
