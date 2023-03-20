@@ -251,6 +251,7 @@ footer{
 }
 
 /* Menu styles */
+
 .main-title{
     display: flex;
     justify-content: center;
@@ -266,6 +267,7 @@ footer{
     color: var(--orange-color);
 }
 .menu-page{
+    font-family: Quicksand, sans-serif;
     display: flex;
     justify-content: space-around;
 
@@ -306,14 +308,29 @@ footer{
 .menu-page__button{
     display: inline-block;
     width: fit-content;
-    height: 40px;
-    padding: 10px;
+    height: 30px;
+    padding: 5px 10px;
     border-radius: 5px;
     background-color: var(--orange-color);
     color: #fff;
     text-transform: capitalize;
 
     position: absolute;
-    bottom: 50px;
-    right: 50px;
+    bottom: 150px;
+    right:100px;
+}
+
+/* Specials & coupons */
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero__title{
+    font-family: Quicksand, sans-serif;
+    font-size: 35px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: var(--menu-text-color);
 }
