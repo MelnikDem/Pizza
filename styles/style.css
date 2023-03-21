@@ -334,3 +334,26 @@ footer{
     font-weight: bold;
     color: var(--menu-text-color);
 }
+
+/* Modal window */
+.modal {
+    height: 250px;
+    width: 500px;
+    background: rgb(248, 244, 244, .5);
+    position: absolute;
+    top: 50px;
+    left: 500px;
+}
+.modal__img{
+    width: 100%;
+}
+.closeBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 22px;
+}
+.hide{
+	display: none!important;
+}
