@@ -4,5 +4,5 @@ const accordionItem = document.querySelectorAll(".accordion-item");
     }
     function showOrderContent() {
       this.nextElementSibling.classList.toggle("hide");
-      this.firstElementChild.classList.toggle("rotate");
+      this.lastElementChild.classList.toggle("rotate");
     }

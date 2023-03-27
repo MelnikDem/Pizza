@@ -188,15 +188,18 @@
             </div>
             <div class="contacts__input">
               <label for="text">Name</label>
-              <input type="text" />
+              <input class="contact__name" type="text" />
+              <span class="error hide">"mistake in a name"</span>
             </div>
             <div class="contacts__input">
               <label for="email">e-mail</label>
-              <input type="email" />
+              <input class="contact__email" type="email" />
+              <span class="error hide">"enter valid email!"</span>
             </div>
             <div class="contacts__input">
               <label for="tel">People number</label>
-              <input type="tel" />
+              <input class="contact__phone" type="tel" placeholder="+380---------"/>
+              <span class="error hide">enter a valid phone number!</span>
             </div>
             <div class="contacts__input">
               <label for="date">Date & time</label>
@@ -211,15 +214,16 @@
         <section class="order">
           <div class="order__accordion">
             <div class="order__account accordion-item">
-              Account<span>></span>
+              <h2>Account</h2>
               <p>
                 To place your order now, log in to your existing account or sign
                 up.
               </p>
+              <button class="accordion-item__btn first-btn"></button>
             </div>
             <div class="order__content hide">
               <div class="registration">
-                <span class="registration-text">Have an account ?</span>
+                <h2 class="registration-text">Have an account ?</span>
                 <a class="registration-link" href="">Log in</a>
               </div>
               <div class="registration">
@@ -228,7 +232,8 @@
               </div>
             </div>
             <div class="order__address accordion-item">
-              Delivery address<span>></span>
+              <h2>Delivery address</h2>
+              <button class="accordion-item__btn"></button>
             </div>
             <div class="order__content hide">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -237,7 +242,8 @@
               omnis tempore facilis voluptatum reiciendis tenetur.
             </div>
             <div class="order__payment accordion-item">
-              Payment<span>></span>
+              <h2>Payment</h2>
+              <button class="accordion-item__btn"></button>
             </div>
             <div class="order__content hide">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -246,11 +252,31 @@
               omnis tempore facilis voluptatum reiciendis tenetur.
             </div>
           </div>
-          <div class="order__form">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          <div class="order__form form">
+            <div class="form__block">
+              <div class="form__header">
+                <div class="form__img">
+                  <img src="./img/small-pizza.png" alt="">
+                </div>
+                <div>
+                  <h2 class="form__heading">Wow ! Pizza</h2>
+                  <h3 class="form__subheading">delivered to this location</h3>
+                </div>
+              </div>
+              <div class="form__calc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Perspiciatis illo, asperiores molestias nemo dolor similique
             excepturi. Esse natus accusamus cumque sed voluptas? Unde hic, omnis
             tempore facilis voluptatum reiciendis tenetur.
+              </div>
+              <div class="form__details">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis illo, asperiores molestias nemo dolor similique
+            excepturi. Esse natus accusamus cumque sed voluptas? Unde hic, omnis
+            tempore facilis voluptatum reiciendis tenetur.
+              </div>
+              
+            </div>
           </div>
         </section>
       </main>
@@ -300,4 +326,5 @@
   <script src="./js/nightmode.js"></script>
   <script src="./js/modal.js"></script>
   <script src="./js/accordion.js"></script>
+  <script src="./js/resevation.js"></script>
 </html>

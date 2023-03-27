@@ -338,12 +338,23 @@ a{
     margin-top: 10px;
 }
 .contacts__input{
+    position: relative;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
     padding: 0 20px;
 }
 
+.error{
+    display: inline-block;
+    width: 220px;
+    position: absolute;
+    bottom: -16px;
+    right: 22px;
+    font-weight: bold;
+    font-size: 15px;
+    color: red;
+}
 .contacts__btn{
     font-weight: 600;
     font-size: 20px;
@@ -357,11 +368,49 @@ a{
 }
 
 /* accordion order section */
+.accordion-item {
+    background-color: #D9D9D9;
+    color: #1E1E1E;
+    border: 1px solid var(--orange-color);
+    padding: 25px 40px;
+    cursor: pointer;
+    position: relative
+}
+
+.accordion-item__btn{
+    display: inline-block;
+    min-width: 20px;
+    min-height: 20px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    position: absolute;
+    top: 1.5rem;
+    right: 10px;
+    opacity: 0.8;
+}
+.first-btn {
+    top: 2.5rem;
+}
+.accordion-item__btn::before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(https://svgshare.com/i/723.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .order{
     height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    background-image: url(/img/Pizza-slice.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 350px;
 }
 .order__accordion {
     width: 50%;
@@ -369,41 +418,56 @@ a{
 }
 .order__account::before{
     content: "";
-    display: block;
+    position: absolute;
+    top: 20px;
+    left: -25px;
+    display: inline-block;
+    width: 50px;
     height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
     background-image: url(../img/icon_User.svg);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    background-color: black;
 }
 .order__address::before{
     content:"";
+    position: absolute;
+    top: 10px;
+    left: -25px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #1E1E1E;
+    border-radius: 50%;
     display: block;
     height: 50px;
     background-image: url(../img/icon_Alternate.svg);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    background-color: #1E1E1E;
 }
 .order__payment::before{
     content:"";
+    position: absolute;
+    top: 10px;
+    left: -25px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #1E1E1E;
+    border-radius: 50%;
     display: block;
     height: 50px;
     background-image: url(../img/icon_CreditCard.svg);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    background-color: #1E1E1E;
 }
-.accordion-item {
-    background-color: #D9D9D9;
-    color: #1E1E1E;
-    border: 1px solid var(--orange-color);
-    padding: 10px;
-    cursor: pointer;
-    position: relative
-}
-
-.accordion-item span {
-    color: #151515;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
 .order__content {
     width: 100%;
     margin: auto;
@@ -419,19 +483,49 @@ a{
     text-align: center;
     margin: 30px;
 }
-
 .hide {
     height: 0px;
 }
-
 .rotate {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
     transition: .5s;
 }
+/* Order form */
 .order__form{
     width: 40%;
-}
 
+    font-weight: 700;
+    line-height: 1.25;
+    color: #1E1E1E;
+}
+.form__block{
+    height: 600px;
+    width: 400px;
+    background: rgba(217, 217, 217, 0.59);
+    box-shadow: 10px 19px 30px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding-top: 10px;
+}
+.form__block > div{
+    margin-bottom: 20px;
+}
+.form__header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.form__heading{
+    font-size: 32px;
+}
+.form__subheading{
+    font-size: 16px;
+}
+.form__img{
+    width: 120px;
+}
+.form__img > img{
+    opacity: 100%;
+}
 /* Modal window */
 .modal {
     height: 250px;
