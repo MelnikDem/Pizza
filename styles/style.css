@@ -99,6 +99,9 @@ body{
     background-color: var(--base-color);
     color: var(--menu-text-color);
  }
+img {
+     width: 100%;
+ }
 ul{
     list-style: none
 }
@@ -253,7 +256,7 @@ a{
     left: -95px;
     max-width: 300px;
 }
-.menu__img{
+img{
     width: 100%;
 }
 .menu__heading {
@@ -500,19 +503,18 @@ a{
 }
 .form__block{
     height: 600px;
-    width: 400px;
+    width: 450px;
     background: rgba(217, 217, 217, 0.59);
     box-shadow: 10px 19px 30px 5px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     padding-top: 10px;
 }
-.form__block > div{
-    margin-bottom: 20px;
-}
+
 .form__header{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 20px;
 }
 .form__heading{
     font-size: 32px;
@@ -526,6 +528,49 @@ a{
 .form__img > img{
     opacity: 100%;
 }
+
+/* Pizza construstor */
+.form__pizza-choice{
+    margin: 10px auto;
+}
+.pizza-size{
+    display: flex;
+    justify-content: space-around;
+    margin: 5px auto;
+}
+
+.pizza-constuctor__img {
+    width: 100px;
+    margin-left: calc(100% / 3);
+}
+.pizza-constuctor__ingridients{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.ingridient{
+    width: 50px;
+    margin-left: 50px;
+    font-size: 15px;
+}
+.ingridient:last-of-type{
+   padding-top: 7px;
+}
+.edited{
+    width: 80%;
+}
+.pizza-constuctor__result{
+    display: flex;
+    justify-content: center;
+
+}
+.pizza-constuctor__result > p{
+    margin-right: 10px;
+}
+
+
+
+
 /* Modal window */
 .modal {
     height: 250px;

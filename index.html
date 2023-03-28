@@ -107,12 +107,12 @@
               <div class="menu__slice-select">
                 <h2 class="menu__heading first-menu">Pizza incredients</h2>
                 <ul>
-                  <li>Corn ...................................... $2</li>
                   <li>Mozzarella ....................... $4</li>
-                  <li>Papperoni ........................ $2</li>
+                  <li>Pineapple ......................... $3</li>
+                  <li>Pepper ................................ $2</li>
+                  <li>Mushroom ....................... $3</li>
                   <li>Bacon .................................. $4</li>
-                  <li>Ananas ............................... $4</li>
-                  <li>Tomatos ............................ $3</li>
+                  <li>Tomato ............................... $2</li>
                   <li>Sauce ................................... $2</li>
                 </ul>
               </div>
@@ -269,11 +269,63 @@
             excepturi. Esse natus accusamus cumque sed voluptas? Unde hic, omnis
             tempore facilis voluptatum reiciendis tenetur.
               </div>
-              <div class="form__details">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis illo, asperiores molestias nemo dolor similique
-            excepturi. Esse natus accusamus cumque sed voluptas? Unde hic, omnis
-            tempore facilis voluptatum reiciendis tenetur.
+              <div class="form__pizza-choice pizza-constuctor">
+                <form class="pizza-size" action="">
+                  <label for="radio" class="pizza-size__radio">
+                    <input type="radio" class="radiobtn" value="small">
+                    <span class="pizza-size__name">Small</span>
+                  </label>
+                  <label for="radio" class="pizza-size__radio">
+                    <input type="radio" class="radiobtn" value="medium">
+                    <span class="pizza-size__name">Medium</span>
+                  </label>
+                  <label for="radio" class="pizza-size__radio">
+                    <input type="radio" class="radiobtn" value="large">
+                    <span class="pizza-size__name">Large</span>
+                  </label>
+                </form>
+                <div>
+                  <div>
+                    <div class="pizza-constuctor__thumb">
+                      <img class="pizza-constuctor__image" src="./pizza_img/bortik.png" alt="pizza body">
+                    </div>
+                    <div class="pizza-constuctor__ingridients">                  
+                      <div class="ingridient">
+                        <img draggable = "true" class="drag_drop" src="./pizza_img/bacon.png" alt="">
+                        <span>Bacon</span>
+                      </div>
+                      <div class="ingridient">
+                        <img draggable = "true" class="drag_drop"  src="./pizza_img/mushrooms.png" alt="">
+                        <span>Mushroom</span>
+                      </div>
+                      <div class="ingridient">
+                        <img draggable = "true" class="drag_drop"  src="./pizza_img/mocarela.png" alt="">
+                        <span>Mozzarella</span>
+                      </div>
+                      <div class="ingridient">
+                        <img draggable = "true" class="drag_drop"  src="./pizza_img/tomatos.png" alt="">
+                        <span>Tomato</span>
+                      </div>
+                      <div class="ingridient">
+                        <img draggable = "true" class="drag_drop"  class="edited" src="./pizza_img/pineapples.png" alt="">
+                        <span>Pineapple</span>
+                      </div>
+                      <div class="ingridient">
+                        <img draggable = "true" class="drag_drop"  class="edited" src="./pizza_img/peppers.png" alt="">
+                        <span>Pepper</span>
+                      </div>
+                      <div class="ingridient">
+                        <img draggable = "true" class="drag_drop"  src="./pizza_img/sous.png" alt="">
+                        <span>Sauce</span>
+                      </div>
+                  
+                    </div>
+                  </div>
+                </div>
+                <div class="pizza-constuctor__result">
+                  <p class="result__price">Price: </p>
+                  <span class="result__span">0 $</span>
+                </div>
               </div>
               
             </div>
@@ -327,4 +379,5 @@
   <script src="./js/modal.js"></script>
   <script src="./js/accordion.js"></script>
   <script src="./js/resevation.js"></script>
+  <script src="./js/pizza-constructor.js"></script>
 </html>
