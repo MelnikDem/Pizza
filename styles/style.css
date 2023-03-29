@@ -370,7 +370,22 @@ img{
     padding: 5px 10px;
 }
 
-/* accordion order section */
+/* Order section / Accordion */
+.order {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-image: url(/img/Pizza-slice.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 350px;
+}
+.order__accordion {
+    width: 50%;
+    margin: 20px auto;
+}
 .accordion-item {
     background-color: #D9D9D9;
     color: #1E1E1E;
@@ -404,21 +419,6 @@ img{
     background-size: contain;
 }
 
-.order{
-    height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    background-image: url(/img/Pizza-slice.png);
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    background-size: 350px;
-}
-.order__accordion {
-    width: 50%;
-    margin: 20px auto;
-}
 .order__account::before{
     content: "";
     position: absolute;
@@ -434,6 +434,10 @@ img{
     background-position: center;
     background-size: 30px;
     background-color: black;
+}
+.order__account.active::before {  
+    border: 1px solid #fff;
+    background-color: #fff;
 }
 .order__address::before{
     content:"";
@@ -453,6 +457,10 @@ img{
     background-size: 30px;
     background-color: #1E1E1E;
 }
+.order__address.active::before {
+    border: 1px solid #fff;
+    background-color: #fff;
+}
 .order__payment::before{
     content:"";
     position: absolute;
@@ -470,6 +478,10 @@ img{
     background-position: center;
     background-size: 30px;
     background-color: #1E1E1E;
+}
+.order__payment.active::before {
+    border: 1px solid #fff;
+    background-color: #fff;
 }
 .order__content {
     width: 100%;
@@ -519,7 +531,7 @@ img{
 .form__heading{
     font-size: 32px;
 }
-.form__subheading{
+.form__heading:nth-child(2){
     font-size: 16px;
 }
 .form__img{
@@ -638,6 +650,10 @@ img{
 .night {
     background-color: var(--standard-color);
     color: var(--night-text-color);
+}
+.night-accordion{
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff !important;
 }
 .night-orange{
     color: var(--night-orange-color)!important;
