@@ -31,7 +31,7 @@
           <div class="header__logo">
             <a href="" class="header__logo-link">
               <svg class="logo-icon">
-                <use href="./img/symbol-defs.svg#icon-PizzaLogo"></use>
+                <use id="logo-icon" href="./img/symbol-defs.svg#icon-PizzaLogo"></use>
               </svg>
               <span class="logo-text">mania</span>
             </a>
@@ -60,7 +60,7 @@
         <!-- Main-page -->
         <section class="main-content" id="main">
           <div class="main-content__left-part">
-            <h1 class="main-content__heading">Pizza family</h1>
+            <h1 class="main-content__heading heading-color">Pizza family</h1>
             <p class="main-content__text">
               people disappoint, but pizza never does.
             </p>
@@ -69,7 +69,7 @@
               <input
                 type="button"
                 value="search location"
-                class="location__btn"
+                class="location__btn btn"
               />
             </div>
             <div>
@@ -84,7 +84,7 @@
                 alt="Family pizza image"
               />
             </div>
-            <button class="button-mode btn" type="button">
+            <button class="button-mode" type="button">
               <svg class="bth__icon">
                 <use
                   id="svg-icon"
@@ -97,7 +97,7 @@
         <!-- Menu part -->
         <section class="menu-page" id="menu">
           <div class="menu-page__title">
-            <h1 class="menu-page__heading">Menu</h1>
+            <h2 class="menu-page__heading heading-color">Menu</h1>
           </div>
           <div class="menu-page__content menu">
             <div class="menu__thumb">
@@ -170,9 +170,8 @@
                   <span>$ 22.99</span>
                 </div>
               </div>
-              <a class="pizza-type__button" href="#" onclick="return false;"
-                >Explore more</a
-              >
+              <button class="pizza-type__button btn" onclick="return false;"
+                >Explore more</button>
             </div>
           </div>
         </section>
@@ -339,7 +338,7 @@
       <!-- Footer -->
       <footer>
         <div class="footer-section">
-          <h2 class="footer-section__title">Find us in socials</h2>
+          <h2 class="footer-section__title heading-color">Find us in socials</h2>
           <ul class="footer-section__list">
             <li>
               <a

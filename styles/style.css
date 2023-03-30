@@ -284,6 +284,7 @@ img{
     height: 30px;
     padding: 5px 10px;
     border-radius: 5px;
+    border-style: none;
     background-color: var(--orange-color);
     color: #fff;
 
@@ -386,15 +387,23 @@ img{
     width: 50%;
     margin: 20px auto;
 }
+/* background: rgba(255, 255, 255, 0.2); */
 .accordion-item {
     background-color: #D9D9D9;
     color: #1E1E1E;
     border: 1px solid var(--orange-color);
     padding: 25px 40px;
     cursor: pointer;
-    position: relative
+    position: relative;
+    font-weight: 700;
+    line-height: 1.1;
 }
-
+.accordion-item h2{
+    font-size: 35px;
+}
+.accordion-item p{
+    font-size: 15px;
+}
 .accordion-item__btn{
     display: inline-block;
     min-width: 20px;
@@ -402,12 +411,12 @@ img{
     background-color: transparent;
     border: 1px solid transparent;
     position: absolute;
-    top: 1.5rem;
+    top: 2rem;
     right: 10px;
     opacity: 0.8;
 }
 .first-btn {
-    top: 2.5rem;
+    top: 3rem;
 }
 .accordion-item__btn::before{
     content: "";
@@ -435,7 +444,7 @@ img{
     background-size: 30px;
     background-color: black;
 }
-.order__account.active::before {  
+.order__account.active::before {
     border: 1px solid #fff;
     background-color: #fff;
 }
@@ -484,11 +493,17 @@ img{
     background-color: #fff;
 }
 .order__content {
+    display: flex;
+    justify-content: center;
     width: 100%;
     margin: auto;
     height: 100px;
     overflow: hidden;
-    background-color: var(--base-color);
+    border-right: 1px solid var(--orange-color);
+    border-left: 1px solid var(--orange-color);
+}
+.order__content:last-of-type{
+    border-bottom:1px solid var(--orange-color);
 }
 .registration{
     display: inline-block;
@@ -649,15 +664,23 @@ img{
 /* night mode */
 .night {
     background-color: var(--standard-color);
-    color: var(--night-text-color);
+    color: var(--night-text-color)!important;
+}
+.night-border{
+    background-color: var(--standard-color);
+    border:2px solid var(--night-orange-color);
 }
 .night-accordion{
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff !important;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff!important;
 }
 .night-orange{
     color: var(--night-orange-color)!important;
 }
+.night-background{
+    background-color: var(--night-orange-color);
+}
+
 .night-form{
     background: rgba(255, 255, 255, 0.05);
     border-width: 3px 1px 1px 3px;
@@ -680,3 +703,4 @@ img{
 .swal2-confirm{
     background-color: var(--orange-color)!important;
 }
+

@@ -14,7 +14,7 @@ const img = document.querySelectorAll('.drag_drop'),
     poligon = document.querySelector('.pizza-constuctor__thumb');
 
 img.forEach((element, i) => {
-    el.addEventListener("mousedown", (e) => {
+    ael.addEventListener("mousedown", (e) => {
 
         let shiftX = e.clientX - el.getBoundingClientRect().left;
         let shiftY = e.clientY - el.getBoundingClientRect().top;
