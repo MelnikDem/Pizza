@@ -108,10 +108,11 @@
                 <h2 class="menu__heading first-menu">Pizza incredients</h2>
                 <ul>
                   <li>Mozzarella ....................... $4</li>
-                  <li>Pineapple ......................... $3</li>
-                  <li>Pepper ................................ $2</li>
-                  <li>Mushroom ....................... $3</li>
+                  <li>Bavarian sausages .. $4</li>
                   <li>Bacon .................................. $4</li>
+                  <li>Pineapple ......................... $3</li>
+                  <li>Mushroom ....................... $3</li>
+                  <li>Pepper ................................ $2</li>
                   <li>Tomato ............................... $2</li>
                   <li>Sauce ................................... $2</li>
                 </ul>
@@ -198,7 +199,7 @@
             <div class="contacts__input">
               <label for="tel">People number</label>
               <input class="contact__phone" type="tel" placeholder="+380---------"/>
-              <span class="error hide">enter a valid phone number!</span>
+              <span class="error hide">enter valid phone number!</span>
             </div>
             <div class="contacts__input">
               <label for="date">Date & time</label>
@@ -262,75 +263,104 @@
                   <h3 class="form__heading">delivered to this location</h3>
                 </div>
               </div>
-              <div class="form__calc">
-                <div>
-                  <select name="" id=""></select>
+              <div class="form__choice">
+                <div class="form__pizza-type">
+                  <label>Choose pizza: </label>
+                  <select class="select-pizza" name="pizza-type" id="">
+                    <option disabled="disabled" selected="selected" style="display:none;">make a choice</option>
+                    <option class="select__option" id="option1" value="19.99">Classic pizza</option>
+                    <option class="select__option" id="option2" value="20.99">Texas pizza</option>
+                    <option class="select__option" id="option3" value="21.99">Papperoni pizza with tomatos</option>
+                    <option class="select__option" id="option4" value="22.99">Barbecue pizza</option>
+                  </select>
                 </div>
-                <div><button class="value-button decrease-button" onclick="decreaseValue(this)" title="Azalt">-</button>
-                <div class="number">0</div>
-                <button class="value-button increase-button" onclick="increaseValue(this, 5)" title="Arrtır">+
-                </button></div>
+               <div class="form__pizza-calc">
+                 <div class="form__amount">
+                  <button class="value-button decrease-button">-
+                  </button>
+                  <div class="number">0</div>
+                  <button class="value-button increase-button">+
+                </button>
               </div>
+              <div class="form__result">
+                <div class="form__calc"></div>
+                <div>$</div>
+              </div>
+               </div>
+              </div>
+              <!-- Construct your pizza block -->
               <div class="form__pizza-choice pizza-constuctor">
+                <!-- Pizza size select-->
+                <h2 class="pizza-constuctor__title">Construct your Pizza</h2>
                 <form class="pizza-size" action="">
                   <label for="radio" class="pizza-size__radio">
-                    <input type="radio" class="radiobtn" value="small">
+                    <input type="radio" class="radiobtn" id="small" name="size" value="small">
                     <span class="pizza-size__name">Small</span>
                   </label>
                   <label for="radio" class="pizza-size__radio">
-                    <input type="radio" class="radiobtn" value="medium">
+                    <input type="radio" class="radiobtn" id="medium" name="size" value="medium">
                     <span class="pizza-size__name">Medium</span>
                   </label>
                   <label for="radio" class="pizza-size__radio">
-                    <input type="radio" class="radiobtn" value="large">
+                    <input type="radio" class="radiobtn" id="large" name="size" value="large">
                     <span class="pizza-size__name">Large</span>
                   </label>
                 </form>
                 <div>
+                  <!-- Add ingridients block -->
                   <div>
                     <div class="pizza-constuctor__thumb">
-                      <img class="pizza-constuctor__image" src="./pizza_img/bortik.png" alt="pizza body">
+                      <img class="pizza-constuctor__image" src="./pizza_img/bortik.png" alt="pizza classic">
                     </div>
                     <div class="pizza-constuctor__ingridients">                  
                       <div class="ingridient">
-                        <img draggable = "true" class="drag_drop" src="./pizza_img/bacon.png" alt="">
+                        <img draggable = "true" class="drag_drop" id="bacon" data-key="ingridient" src="./pizza_img/bacon.png" alt="bacon">
                         <span>Bacon</span>
                       </div>
                       <div class="ingridient">
-                        <img draggable = "true" class="drag_drop"  src="./pizza_img/mushrooms.png" alt="">
+                        <img draggable = "true" class="drag_drop" id="mushroom" data-key="ingridient"  src="./pizza_img/mushrooms.png" alt="mushroom">
                         <span>Mushroom</span>
                       </div>
                       <div class="ingridient">
-                        <img draggable = "true" class="drag_drop"  src="./pizza_img/mocarela.png" alt="">
+                        <img draggable = "true" class="drag_drop" id="mozzarella" data-key="ingridient"   src="./pizza_img/mocarela.png" alt="mozzarella">
                         <span>Mozzarella</span>
                       </div>
                       <div class="ingridient">
-                        <img draggable = "true" class="drag_drop"  src="./pizza_img/tomatos.png" alt="">
+                        <img draggable = "true" class="drag_drop" id="tomato" data-key="ingridient"  src="./pizza_img/tomatos.png" alt="tomato">
                         <span>Tomato</span>
                       </div>
                       <div class="ingridient">
-                        <img draggable = "true" class="drag_drop"  class="edited" src="./pizza_img/pineapples.png" alt="">
+                        <img draggable = "true" class="drag_drop" id="pineapple" data-key="ingridient" src="./pizza_img/pineapples.png" alt="pineapple">
                         <span>Pineapple</span>
                       </div>
                       <div class="ingridient">
-                        <img draggable = "true" class="drag_drop"  class="edited" src="./pizza_img/peppers.png" alt="">
+                        <img draggable = "true" class="drag_drop" id="pepper" data-key="ingridient" src="./pizza_img/peppers.png" alt="pepper">
                         <span>Pepper</span>
                       </div>
                       <div class="ingridient">
-                        <img draggable = "true" class="drag_drop"  class="edited" src="./pizza_img/sausages.png" alt="">
-                        <span>Bavarian sausages</span>
+                        <img draggable = "true" class="drag_drop" id="ketchup" data-key="ingridient" src="./pizza_img/sous_classic.png" alt="ketchup   ">
+                        <span>Classic Sauce</span>
                       </div>
                       <div class="ingridient">
-                        <img draggable = "true" class="drag_drop"  src="./pizza_img/sous.png" alt="">
-                        <span>Sauce</span>
+                        <img draggable = "true" class="drag_drop" id="sauсe" data-key="ingridient"  src="./pizza_img/sous.png" alt="sauсe">
+                        <span>BBQ Sauce</span>
                       </div>
                   
                     </div>
                   </div>
                 </div>
-                <div class="pizza-constuctor__result">
-                  <p class="result__price">Price: </p>
-                  <span class="result__span">0 $</span>
+                <div>
+                  <div class="pizza-constuctor__result">
+                    <p class="result__price">Price: </p>
+                    <div class="result__span">0 $</div>
+                    <div class="result__ingridient">
+                    <p>Ingredients: <span id="show_ingredients" class="show_ingridients"></span></p>
+                    </div>
+                  </div>  
+                <div class="pizza-constructor__btns">
+                  <button type="reset">CLEAR</button>
+                  <button class="submit" type="submit">DISCOUNT</button>
+                </div>
                 </div>
               </div>
               
@@ -384,6 +414,7 @@
   <script src="./js/modal.js"></script>
   <script src="./js/accordion.js"></script>
   <script src="./js/resevation.js"></script>
+  <script src="./js/select.js"></script>
   <script src="./js/pizza-constructor.js"></script>
    <script src="./js/nightmode.js"></script>
 </html>

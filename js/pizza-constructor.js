@@ -1,142 +1,195 @@
 const form = document.querySelector(".pizza-size"),
-    priceResult = document.querySelector('.result__price'),
-    spanResult = document.querySelector('.result__span');
+    resetBtn = document.querySelector("[type=reset]"),
+    discontBtn = document.querySelector(".submit");
+
+    const clientPizza = {
+        size: null,
+        ingridients: [],
+        nameIngridients: [],
+        price: 0,
+    };
+
+    //Pizza price
+    const pricePizza = {
+        largePizza: 7,
+        midPizza: 5,
+        smallPizza: 3,
+        bacon: 4,
+        mushroom: 3,
+        mozzarella: 4,
+        tomato: 2,
+        pineapple: 3,
+        pepper: 2,
+        ketchup: 2,
+        sauce: 2,
+    };
     
-let price = 0;
-function Pizza(size) {
-    this.size = size;
-}
+window.addEventListener("load", () => {
+    // Client pizza
+    let inputRadio = document.querySelectorAll(".radiobtn");
+    inputRadio.forEach((e) => {
+        e.addEventListener("click", () => {
+            clientPizza.size = e.value;
+            console.dir("radiobtn: "+ clientPizza.size);
+            myPizza();
+        });
+    });
+    
+    function costPizza() {
+        clientPizza.price = 0;
+        if (clientPizza.size) {
+            if (clientPizza.size === "small") {
+                clientPizza.price += pricePizza.smallPizza;
+            }
+            if (clientPizza.size === "medium") {
+                clientPizza.price += pricePizza.midPizza;
+            }
+            if (clientPizza.size === "large") {
+                clientPizza.price += pricePizza.largePizza;
+            }
+        }
+
+        clientPizza.ingridients.forEach((element) => {
+            if (element === "bacon") {
+                clientPizza.price += pricePizza.bacon;
+            }
+            if (element === "mushroom") {
+                clientPizza.price += pricePizza.mushroom;
+            }
+            if (element === "mozzarella") {
+                clientPizza.price += pricePizza.mozzarella;
+            }
+            if (element === "tomato") {
+                clientPizza.price += pricePizza.tomato;
+            }
+            if (element === "pineapple") {
+                clientPizza.price += pricePizza.pineapple;
+            }
+            if (element === "pepper") {
+                clientPizza.price += pricePizza.pepper;
+            }
+            if (element === "ketchup") {
+                clientPizza.price += pricePizza.ketchup;
+            }
+            if (element === "sauсe") {
+                clientPizza.price += pricePizza.sauсe;
+            }
+        });
+    }
+  
+    function cost() {
+        if (clientPizza.price !== 0) {
+        console.dir("function cost: "+clientPizza.price)
+        document.querySelector(".result__span").textContent = `${clientPizza.price} $`;
+        } else document.querySelector(".result__span").textContent = "0";
+    }
+
+    function ingridients() {
+        document.querySelector(".result__ingridient > p").textContent = `Ingridients: ${clientPizza.nameIngridients.join(", ")}`;
+        console.dir("ingridients:" + clientPizza.nameIngridients.join(", "))
+    }
+
+    function priceDiscount() {
+        clientPizza.price = clientPizza.price - clientPizza.price * 0.2;
+        document.querySelector(".result__price").textContent = "New Price -20% discount: ";
+        document.querySelector(".result__span").textContent = `${clientPizza.price} $`;
+    }
+
+    discontBtn.addEventListener("click", priceDiscount);
+
+    function myPizza() {
+    costPizza();
+    cost();
+    ingridients();
+    }
+
 
 //Drag & drop
-const img = document.querySelectorAll('.drag_drop'),
-    container = document.querySelector("ingridient"),
-    cake =document.querySelector("pizza-constuctor__image")
-    poligon = document.querySelector('.pizza-constuctor__thumb');
 
-    cake.addEventListener('dragover', preventEvent);
-    baseposition.addEventListener('dragover', preventEvent);
+const dragAndDrop = () => {
+    const defaultPizza = document.querySelector(".pizza-constuctor__thumb");
+    console.log(defaultPizza);
 
-    function preventEvent(e){
-	e.preventDefault();
+    function dragStart(e) {
+        if (e.target.dataset.key === "ingridient") {
+            if (!clientPizza.nameIngridients.includes(e.target.alt)) {
+                clientPizza.nameIngridients.push(e.target.alt);
+                clientPizza.ingridients.push(e.target.id);
+            }
+        }
+        e.dataTransfer.effectAllowed = "move";
+        e.dataTransfer.setData("img", this.attributes.src.textContent);
+    }
+    function dragEnd(e) {
+      defaultPizza.classList.remove("hover");
+      if (e.preventDefault) e.preventDefault();
+      if (e.stopPropagation) e.stopPropagation();
     }
 
-    cake.addEventListener('drop', dropElement);
-    baseposition.addEventListener('drop', dropElement);
-
-    function dropElement(e){
-		this.appendChild(img)
-		img.style.left = e.clientX - img.offsetWidth / 2 + "px";
-        img.style.top = e.clientY - img.offsetHeight / 2 + "px";
+    function dragEnter(e) {
+      defaultPizza.classList.add("hover");
+      if (e.preventDefault) e.preventDefault();
+      if (e.stopPropagation) e.stopPropagation();
     }
 
-// img.forEach((element, i) => {
-//     ael.addEventListener("mousedown", (e) => {
-//         console.log(e)
+    function dragLeave(e) {
+      defaultPizza.classList.remove("hover");
+      if (e.preventDefault) e.preventDefault();
+      if (e.stopPropagation) e.stopPropagation();
+    }
 
-//         let shiftX = e.clientX - element.getBoundingClientRect().left;
-//         let shiftY = e.clientY - element.getBoundingClientRect().top;
-//         if (window.getComputedStylemente(element)["position"] === "absolute") {
-//             setCakeSize()
-//         } else {
-//             setIngSize(element)
-//             element.style.width = "auto";
-//         }
+    function dragOver(e) {
+      if (e.preventDefault) e.preventDefault();
+      if (e.stopPropagation) e.stopPropagation();
+    }
 
-//         el.style.position = 'absolute';
-//         el.style.zIndex = 100;
+    function dropIngridient(e) {
+      if (e.preventDefault) e.preventDefault();
+      if (e.stopPropagation) e.stopPropagation();
 
-//         document.body.append(el);
+      const imgIngridient = document.createElement("img");
+      imgIngridient.setAttribute("src", e.dataTransfer.getData("img"));
+        defaultPizza.append(imgIngridient);
 
-//         moveAt(e.pageX, e.pageY);
+      myPizza();
+    }
 
-//         function moveAt(pageX, pageY) {
-//             el.style.left = pageX - shiftX + 'px';
-//             el.style.top = pageY - shiftY + 'px';
-//         }
+    defaultPizza.addEventListener("dragover", dragOver);
+    defaultPizza.addEventListener("drop", dropIngridient);
+    defaultPizza.addEventListener("dragenter", dragEnter);
+    defaultPizza.addEventListener("dragleave", dragLeave);
 
-//         function onMouseMove(event) {
-//             moveAt(event.pageX, event.pageY);
-
-//             el.hidden = true;
-//             let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
-//             el.hidden = false;
-
-//             if (!elemBelow) return;
-//             let droppableBelow = elemBelow.closest('.droppable');
-
-//             if (currentDroppable != droppableBelow) {
-
-//                 if (currentDroppable) {
-//                     leaveDroppable(currentDroppable);
-//                 }
-//                 currentDroppable = droppableBelow;
-//                 if (currentDroppable) {
-//                     enterDroppable(currentDroppable);
-//                 }
-//             }
-//         };
-
-//         document.addEventListener('mousemove', onMouseMove);
-
-//         function onMouseUp() {
-//             if (currentDroppable) {
-//                 setCakeSize()
-//                 for (i = 0; i < f0.elements.length; i++) {
-//                     if (f0.elements[i].checked === true) {
-//                         switch (i) {
-//                             case 0:
-//                                 {
-//                                     el.style.transform = "scale(0.8)";
-//                                     break;
-//                                 }
-//                             case 1:
-//                                 {
-//                                     el.style.transform = "scale(0.9)";
-//                                     break;
-//                                 }
-//                             case 2:
-//                                 {
-//                                     el.style.transform = "scale(1)";
-//                                 }
-//                         }
-//                     }
-//                 }
-//                 el.style.left = "1px";
-//                 el.style.top = "2px";
-//                 el.style.opacity = "1";
-//                 goal.style.position = 'relative'
-//                 goal.append(el);
-//                 goal.style.background = "";
-//                 ingDetermination(ind)
-//             } else {
-//                 elementClones[ind].remove()
-//                 elementClones[ind] = null
-//                 setIngSize(el)
-//                 el.style.width = "100%";
-//                 el.style.position = "inherit"
-//                 ingridientContainers[ind].prepend(el)
-//                 ingDelete(ind)
-//             }
-//             document.removeEventListener('mousemove', onMouseMove);
-//             el.onmouseup = null;
-//         };
-
-//         el.addEventListener("mouseup", onMouseUp)
-
-//         if (elementClones[ind] === null) {
-//             elementClones[ind] = el.cloneNode(true)
-//             elementClones[ind].style.position = "inherit"
-//             ingridientContainers[ind].prepend(elementClones[ind])
-//         }
-//     })
-    
-// })
-
-//return
-// gate1.addEventListener("mouseleave", returnBallCenter);
-// gate2.addEventListener("mouseleave", returnBallCenter);
+    const ingridients = document.querySelectorAll(".drag_drop");
+    ingridients.forEach((ingridient) => {
+      ingridient.addEventListener("dragstart", dragStart);
+      ingridient.addEventListener("dragend", dragEnd);
+    });
+  };
   
-// function returnBallCenter(e) {
-//     ball.style.top = 50 + "vh";
-//     ball.style.left = 50 + "%";
-// }
+  dragAndDrop();
+
+  resetBtn.addEventListener("click", () => {
+    clientPizza.size = null;
+    clientPizza.indridients = [];
+    clientPizza.nameIngridients = [];
+    clientPizza.price = 0;
+
+    const ingridients = document.querySelectorAll(".pizza-constuctor__thumb img");
+    
+      ingridients.forEach((ingridient) => {
+          if (!ingridient.alt[0]) {
+              ingridient.remove();
+              console.dir(ingridient);
+      }
+    });
+      myPizza();
+
+      document.querySelector(".result__span").innerHTML = "0 $";
+      
+      for (let i = 0; i < inputRadio.length; i++){
+           inputRadio[i].checked = false;
+      }
+       
+  });
+
+});
