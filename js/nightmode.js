@@ -14,7 +14,7 @@ modeBtn.addEventListener("click", () => {
 
   
   document.querySelector(".location__input").classList.toggle("night-border");
-  document.querySelector('.main-content__text').classList.toggle("night-orange");
+  document.querySelector('.main-content__text').classList.toggle("night");
   document.querySelectorAll("a").forEach(Element => Element.classList.toggle("night-orange"));
   document.querySelectorAll(".heading-color").forEach(Element => Element.classList.toggle("night-orange"));
   document.querySelectorAll(".btn").forEach(Element => Element.classList.toggle("night-background"));
