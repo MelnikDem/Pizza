@@ -173,13 +173,14 @@ const dragAndDrop = () => {
     clientPizza.indridients = [];
     clientPizza.nameIngridients = [];
     clientPizza.price = 0;
+    
+    document.querySelector(".result__price").textContent = "Price: ";
 
     const ingridients = document.querySelectorAll(".pizza-constuctor__thumb img");
     
       ingridients.forEach((ingridient) => {
           if (!ingridient.alt[0]) {
               ingridient.remove();
-              console.dir(ingridient);
       }
     });
       myPizza();
