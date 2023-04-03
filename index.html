@@ -60,10 +60,12 @@
         <!-- Main-page -->
         <section class="main-content" id="main">
           <div class="main-content__left-part">
-            <h1 class="main-content__heading heading-color">Pizza family</h1>
-            <p class="main-content__text">
-              people disappoint, but pizza never does.
-            </p>
+            <div>
+              <h1 class="main-content__heading heading-color">Pizza family</h1>
+              <p class="main-content__text">
+                people disappoint, but pizza never does.
+              </p>
+            </div>
             <div class="main-content__location location">
               <input type="text" class="location__input" />
               <input
@@ -127,7 +129,8 @@
               </div>
             </div>
             <div class="menu__pizza-type pizza-type">
-              <h2 class="menu__heading">Gourmet Pizza</h2>
+              <div>
+                <h2 class="menu__heading">Gourmet Pizza</h2>
               <div class="pizza-type__block">
                 <div>
                   <h3>Classic pizza</h3>
@@ -171,44 +174,46 @@
                   <span>$ 22.99</span>
                 </div>
               </div>
-              <button class="pizza-type__button btn" onclick="return false;"
-                >Explore more</button>
+              <button class="pizza-type__button btn" onclick="return false;">Explore more</button>
+            </div>
             </div>
           </div>
         </section>
         <!-- Contact us -->
         <section class="contacts" id="contact">
-          <form class="contacts__form" action="">
-            <div class="contacts__form-header">
-              <h2 class="contacts__heading">Reservation</h2>
-              <p class="contacts__info">
-                Book online or give us a call on +91 1111 222 333
-              </p>
-              <p class="contacts__info">Between 9:30 am - 10:00 pm</p>
-            </div>
-            <div class="contacts__input">
-              <label for="text">Name</label>
-              <input class="contact__name" type="text" />
-              <span class="error hide">"mistake in a name"</span>
-            </div>
-            <div class="contacts__input">
-              <label for="email">e-mail</label>
-              <input class="contact__email" type="email" />
-              <span class="error hide">"enter valid email!"</span>
-            </div>
-            <div class="contacts__input">
-              <label for="tel">People number</label>
-              <input class="contact__phone" type="tel" placeholder="+380---------"/>
-              <span class="error hide">enter valid phone number!</span>
-            </div>
-            <div class="contacts__input">
-              <label for="date">Date & time</label>
-              <input class="form__date" type="date" value="2023-03-30" />
-            </div>
-            <div>
-              <input class="contacts__btn" type="submit" value="Send mail" />
-            </div>
-          </form>
+          <div class="contacts__form-wrapper">
+            <form class="contacts__form" action="">
+              <div class="contacts__form-header">
+                <h2 class="contacts__heading">Reservation</h2>
+                <p class="contacts__info">
+                  Book online or give us a call on +91 1111 222 333
+                </p>
+                <p class="contacts__info">Between 9:30 am - 10:00 pm</p>
+              </div>
+              <div class="contacts__input">
+                <label for="text">Name</label>
+                <input class="contact__name" type="text" />
+                <span class="error hide">"mistake in a name"</span>
+              </div>
+              <div class="contacts__input">
+                <label for="email">e-mail</label>
+                <input class="contact__email" type="email" />
+                <span class="error hide">"enter valid email!"</span>
+              </div>
+              <div class="contacts__input">
+                <label for="tel">People number</label>
+                <input class="contact__phone" type="tel" placeholder="+380---------" />
+                <span class="error hide">enter valid phone number!</span>
+              </div>
+              <div class="contacts__input">
+                <label for="date">Date & time</label>
+                <input class="form__date" type="date" value="2023-03-30" />
+              </div>
+              <div>
+                <input class="contacts__btn" type="submit" value="Send mail" />
+              </div>
+            </form>
+          </div>
         </section>
         <!-- Order section -->
         <section class="order">
@@ -223,7 +228,7 @@
             </div>
             <div class="order__content hide">
               <div class="registration">
-                <h2 class="registration-text">Have an account ?</span>
+                <span class="registration-text">Have an account ?</span>
                 <a class="registration-link" href="">Log in</a>
               </div>
               <div class="registration">
@@ -235,21 +240,21 @@
               <h2>Delivery address</h2>
               <button class="accordion-item__btn"></button>
             </div>
-            <div class="order__content hide">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis illo, asperiores molestias nemo dolor similique
-              excepturi. Esse natus accusamus cumque sed voluptas? Unde hic,
-              omnis tempore facilis voluptatum reiciendis tenetur.
+            <div class="order__content address hide">
+              <p>18800 Ventura Blvd, Tarzana, CA 91356, USA</p>
+              <p>Garden Walk, 321 W Katella Ave, Anaheim, CA 92802, USA</p>
             </div>
             <div class="order__payment accordion-item">
               <h2>Payment</h2>
               <button class="accordion-item__btn"></button>
             </div>
-            <div class="order__content hide">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis illo, asperiores molestias nemo dolor similique
-              excepturi. Esse natus accusamus cumque sed voluptas? Unde hic,
-              omnis tempore facilis voluptatum reiciendis tenetur.
+            <div class="order__content payment hide">
+             <div class="payment-type"> 
+              <a href=""><img src="./img/card.png" alt=""></a>
+             </div>
+              <div class="payment-type">
+                <a href=""><img src="./img/visa.png" alt=""></a>
+              </div>
             </div>
           </div>
           <div class="order__form form">
