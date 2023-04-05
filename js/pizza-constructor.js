@@ -17,11 +17,11 @@ const form = document.querySelector(".pizza-size"),
         bacon: 4,
         mushroom: 3,
         mozzarella: 4,
-        tomato: 2,
+        tomato: 2,  
         pineapple: 3,
         pepper: 2,
-        ketchup: 2,
-        sauce: 2,
+        ketchup: 1,
+        rikota: 2,
     };
     
 window.addEventListener("load", () => {
@@ -71,22 +71,20 @@ window.addEventListener("load", () => {
             if (element === "ketchup") {
                 clientPizza.price += pricePizza.ketchup;
             }
-            if (element === "sauсe") {
-                clientPizza.price += pricePizza.sauсe;
+            if (element === "rikota") {
+                clientPizza.price += pricePizza.rikota;
             }
         });
     }
   
-    function cost() {
+    function size() {
         if (clientPizza.price !== 0) {
-        console.dir("function cost: "+clientPizza.price)
         document.querySelector(".result__span").textContent = `${clientPizza.price} $`;
         } else document.querySelector(".result__span").textContent = "0";
     }
 
     function ingridients() {
         document.querySelector(".result__ingridient > p").textContent = `Ingridients: ${clientPizza.nameIngridients.join(", ")}`;
-        console.dir("ingridients:" + clientPizza.nameIngridients.join(", "))
     }
 
     function priceDiscount() {
@@ -99,7 +97,7 @@ window.addEventListener("load", () => {
 
     function myPizza() {
     costPizza();
-    cost();
+    size();
     ingridients();
     }
 

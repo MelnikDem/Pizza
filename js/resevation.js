@@ -10,10 +10,10 @@ function validateName() {
     const name = inpName.value;
     let pattern = /^[A-Za-z]+$/;
 
-    if (!name.match(pattern)) {
-        inpName.nextElementSibling.classList.toggle('hide');
+    if (name.match(pattern)) {
+        inpName.nextElementSibling.classList.add('hide');
     } else if (name.match(pattern)) {
-        inpName.nextElementSibling.classList.toggle('hide');
+        inpName.nextElementSibling.classList.remove('hide');
     }  
 };
 
@@ -22,9 +22,9 @@ function validateEmail() {
     let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
     if (!email.match(pattern)) {
-        inpEmail.nextElementSibling.classList.toggle('hide');
+        inpEmail.nextElementSibling.classList.add('hide');
     } else if (email.match(pattern)) {
-        inpEmail.nextElementSibling.classList.toggle('hide');
+        inpEmail.nextElementSibling.classList.remove('hide');
     }
 }
 function checkPhone() {
@@ -34,9 +34,9 @@ function checkPhone() {
 function validatePhone(event) {
     const phone = inpPhone.value;
     if (!checkPhone(phone)) {
-        inpPhone.nextElementSibling.classList.toggle('hide');
+        inpPhone.nextElementSibling.classList.add('hide');
     } else if (checkPhone(phone)) {
-        inpPhone.nextElementSibling.classList.toggle('hide');
+        inpPhone.nextElementSibling.classList.remove('hide');
     }
 }
  
