@@ -846,7 +846,7 @@ img{
     }
     .location__btn{
         width: 100%;
-        margin-top: .5em;
+        margin: .5em 0 0 0 ;
         border:inherit;
     }
     .button-mode{
@@ -899,6 +899,7 @@ img{
     .location__btn{
         width: 10.5em;
         margin: 10px 0 10px 0;
+        
 
     }
     .button-mode{
@@ -1001,7 +1002,7 @@ img{
         padding: 0;
     }
     .contacts__form-header{
-        padding: 20px 0;
+        padding: 2em 0;
     }
     .form__date {
         width: 10em;
