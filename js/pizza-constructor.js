@@ -30,7 +30,6 @@ window.addEventListener("load", () => {
     inputRadio.forEach((e) => {
         e.addEventListener("click", () => {
             clientPizza.size = e.value;
-            console.dir("radiobtn: "+ clientPizza.size);
             myPizza();
         });
     });
@@ -106,7 +105,6 @@ window.addEventListener("load", () => {
 
 const dragAndDrop = () => {
     const defaultPizza = document.querySelector(".pizza-constuctor__thumb");
-    console.log(defaultPizza);
 
     function dragStart(e) {
         if (e.target.dataset.key === "ingridient") {

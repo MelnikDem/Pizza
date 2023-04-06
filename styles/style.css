@@ -135,6 +135,9 @@ a{
     width: 40px;
     height: 35px;
 }
+.header__nav-btn{
+    display: none;
+}
 .header__nav{
     flex-basis: 60%;
     flex-shrink: 2;
@@ -333,7 +336,7 @@ img{
     padding-bottom: 100px;
 }
 .form__date{
-    width: 220px;
+    width: 10.5em;
 }
 .contacts__form-header{
     padding: 40px 80px;
@@ -819,10 +822,10 @@ img{
         height: 100%;
     }
     .main-content{
-        margin-bottom: 50px;
+        margin-bottom: 2.5em;
     }
     .main-content__left-part div:first-of-type{
-        margin-bottom: 10px;
+        margin-bottom: .5em;
     }
     .main-content__heading{
         font-size: 2.5em;
@@ -835,7 +838,7 @@ img{
     }
     .location__btn{
         width: 100%;
-        margin: 10px 0 10px 0;
+        margin-top: .5em;
         border:inherit;
     }
     .button-mode{
@@ -849,7 +852,7 @@ img{
     }
     .contacts{
         justify-content: center;
-        margin-bottom: 50px;
+        margin-bottom: 2.5em;
     }
     .contacts__form-wrapper{
         padding: 0;
@@ -863,7 +866,7 @@ img{
     }
     .order__accordion{
         width: 80%;
-        margin: 0 0 50px 0;
+        margin: 0 0 2.5em 0;
     }
     .order__form{
         display: flex;
@@ -872,6 +875,144 @@ img{
     }
     .select-pizza{
         font-size: 0.7em;
+    }
+
+}
+@media screen and (min-width: 300px) and (max-width: 699px){
+    .container{
+        padding: 0 .5em
+    }
+    .header__logo {
+        width: 70%;
+    }
+    .header__nav{
+        display: none;
+    }
+    .location__btn{
+        width: 10.5em;
+        margin: 10px 0 10px 0;
+
+    }
+    .button-mode{
+        bottom: -5px;
+        right: 0px;
+    }
+    .menu--mobile-version{
+        display: block;
+        width: 100%;
+        height: 145px;
+        padding-right: 1em;
+        
+        position: absolute;
+        top: 50px;
+        right: 0;
+        
+        background-color: #fff;
+        border-top: 1px solid var(--menu-text-color);
+        border-bottom: 1px solid var(--menu-text-color);
+    }
+    .menu--mobile-night{
+        display: block;
+        width: 100%;
+        height: 145px;
+        padding-right: 1em;
+        
+        position: absolute;
+        top: 50px;
+        right: 0;
+        
+        background-color: var(--standard-color);
+        border-top: 1px solid var(--night-orange-color);
+        border-bottom: 1px solid var(--night-orange-color);
+    }
+    .header__nav .nav{
+        flex-direction: column;
+        align-items: end;
+    }
+    .header__nav-btn{
+        display: block;
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--orange-color);
+        border-radius: 4px;
+
+        position: absolute;
+        top: 15px;
+        right: 10px;
+    }
+    .main-content, .menu-page, .contacts, .order{
+        display: block;
+        height: 100%;
+    }
+    .main-content{
+        margin-bottom: 20px;
+    }
+    .main-content__left-part{
+        display: block;
+    }
+    .main-content__left-part > div:not(:last-child){
+        margin-bottom: 1em;
+    }
+
+    .main-content__img-wrapper{
+        display: none;
+    }
+    .main-content__heading{
+        font-size: 2.5em;
+        line-height: 1.5;
+    }
+    .main-content__text{
+        font-size: 1.6em;
+    }
+    .main-content__location{
+    display: block;
+    }
+    .menu-page__title{
+        margin: 0;
+    }
+    .menu-page__heading{
+        font-size: 3em;
+    }
+    .menu__thumb{
+        display: none;
+    }
+    .menu-page__content{
+        flex-direction: column;
+    }
+    .menu__slice, .menu__pizza-type, .order__form{
+        width: 100%;
+    }
+    .menu__slice-select:last-child{
+        margin: 0;
+    }
+    .menu__slice .menu__slice-select{
+        margin-bottom: 1em;
+    }
+
+    .contacts__form-wrapper, .contacts__form, .contacts__form-header{
+        padding: 0;
+    }
+    .contacts__form-header{
+        padding: 20px 0;
+    }
+    .form__date {
+        width: 10em;
+    }
+    .order__accordion{
+        display: none;
+    }
+    .order__form{
+        margin-top: 20px;
+    }
+    .form__pizza-type{
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .contacts__input{
+        font-size: .8em;
+    }
+    .footer-section{
+        margin: 0;
     }
 
 }

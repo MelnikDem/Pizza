@@ -19,6 +19,9 @@ modeBtn.addEventListener("click", () => {
   document.querySelectorAll(".heading-color").forEach(Element => Element.classList.toggle("night-orange"));
   document.querySelectorAll(".btn").forEach(Element => Element.classList.toggle("night-background"));
   document.querySelectorAll(".footer-section__link").forEach(Element => Element.classList.toggle("night-background"));
+  document.querySelector(".header__nav-btn").classList.toggle("night");
+  document.querySelector(".header__nav").classList.toggle("night");
+  
 
   
   const form = document.querySelector(".contacts__form");
@@ -44,3 +47,14 @@ modeBtn.addEventListener("click", () => {
   };
 
 });
+
+const navBtnMob = document.querySelector(".header__nav-btn"),
+          navMenuMob = document.querySelector(".header__nav");
+
+    navBtnMob.addEventListener('click', () => {
+      if (document.body.classList.contains("night")) {
+        navMenuMob.classList.toggle("menu--mobile-night");
+      } else {
+        navMenuMob.classList.toggle("menu--mobile-version");
+      }
+})
